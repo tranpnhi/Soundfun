@@ -1,0 +1,34 @@
+{{errMessage}}
+<h2>Product</h2>
+<button routerLink="/soundsadmin/:id">Search</button> &nbsp;
+<button routerLink="/soundnew">Create new</button> &nbsp;
+<button routerLink="/soundupdate">Update premium status</button><br/><br/>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Audio (watermark for premium)</th>
+            <th>Audio (original)</th>
+            <th>Genre</th>
+            <th>Image</th>
+            <th>Premium</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of sounds">
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.author}}</td>
+            <td>{{s.sound}}</td>
+            <td>{{s.soundpremium}}</td>
+            <td>{{s.genre}}</td>
+            <td>{{s.image}}</td>
+            <td>{{s.premium}}</td>
+            <td>
+                <br/><button (click)="deleteSound(s.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

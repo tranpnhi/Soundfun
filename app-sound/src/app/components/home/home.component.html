@@ -1,0 +1,51 @@
+<p>{{errMessage}}</p>
+<body>
+<nav>
+  <img src="./../../../assets/logo.png"/>
+  <span  style="font-size: xx-large" class="text-white">
+    <b>&nbsp;Soundfun &emsp;</b>
+  </span>
+    <button routerLink="searchid"><b>Filter</b></button>
+  <span style="float: right;">
+    <app-pay></app-pay>
+    &nbsp;
+    <p-button label="Sign out" (onClick)="logOut()"></p-button>
+  </span>
+</nav>
+
+<router-outlet></router-outlet>
+<div>
+  <app-banners></app-banners>
+</div>
+<br/>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let p of sounds">
+      <div class="card">
+        <div>
+          <div >
+              <div class="premium" style="float: right;">{{p.premium}}</div>
+              <img style="border-radius: 9999px; " class="avatar" src="http://localhost:3001/src/{{p.image}}" />&nbsp;
+              <div class="title">
+                <div class="name">{{p.name}}</div>
+                <div class="author">{{p.author}}</div>
+              </div>
+          </div>
+        </div>
+          
+        <div>thanh nhac</div>
+
+        <div class="product-detail-container">
+          <div class="d-flex justify-content-between align-items-center">
+            <audio class="au" src="./../../assets/sound/{{p.sound}}" controls></audio>
+          </div>
+
+          <!-- <div class="d-flex justify-content-between align-items-center mt-2">
+            <div class="count"><button class="iconbutton"></button></div> 
+          </div> -->
+        </div>
+      </div><br/>
+    </div>
+  </div>
+</div>
+</body>

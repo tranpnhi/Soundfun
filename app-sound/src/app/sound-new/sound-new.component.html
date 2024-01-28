@@ -1,0 +1,72 @@
+<p>{{errMessage}}</p>
+<table>
+<tr>
+    <td>Id:</td>
+    <td>
+    <input type="text" class="form-control" #name="ngModel" name="id"
+    id="id" placeholder="Enter Id"
+    [(ngModel)]="sound.id"/>
+    </td>
+</tr>
+<tr>
+    <td>Name:</td>
+    <td>
+    <input type="text" class="form-control" #name="ngModel" name="name"
+    id="name" placeholder="Enter Name"
+    [(ngModel)]="sound.name"/>
+    </td>
+</tr>
+<tr>
+    <td>Author:</td>
+    <td>
+    <input type="text" class="form-control" #name="ngModel"
+    name="author" id="author" placeholder="Enter Author"
+    [(ngModel)]="sound.author"/>
+</td>
+</tr>
+<tr>
+    <td>Audio (contain watermark for premium):</td>
+    <td>
+    <input type="text" class="form-control" #name="ngModel"
+    name="sound" id="sound" placeholder="Enter Audio"
+    [(ngModel)]="sound.sound"/>
+</td>
+</tr>
+<tr>
+    <td>Audio (original):</td>
+    <td>
+    <input type="text" class="form-control" #name="ngModel"
+    name="sound" id="sound" placeholder="Enter Audio"
+    [(ngModel)]="sound.soundpremium"/>
+</td>
+</tr>
+<tr>
+    <td>Genre:</td>
+    <td>
+    <input type="text" class="form-control" #name="ngModel"
+    name="genre" id="genre" placeholder="Enter Genre"
+    [(ngModel)]="sound.genre"/>
+</td>
+</tr>
+<tr>
+    <td>Image:</td>
+    <td>
+    <input type="text" class="form-control" #name="ngModel"
+    name="image" id="image" placeholder="Enter Image"
+    [(ngModel)]="sound.image"/>
+</td>
+</tr>
+<tr>
+    <td>Premium:</td>
+    <td>
+    <input type="number" class="form-control" #name="ngModel"
+    name="premium" id="premium" placeholder="Enter Premium"
+    [(ngModel)]="sound.premium"/>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+    <button (click)="postSound()" routerLink="/soundadmin">Save new</button>
+    </td>
+    </tr>
+</table> 

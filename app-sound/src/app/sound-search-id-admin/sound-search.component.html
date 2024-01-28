@@ -1,0 +1,34 @@
+<h2>Product</h2>
+Search Id: <input type="text" #id> <button
+(click)="searchSound(id.value)">Search</button>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Audio (watermark for premium)</th>
+            <th>Audio (original)</th>
+            <th>Genre</th>
+            <th>Image</th>
+            <th>Premium</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{sound.id}}</td>
+            <td>{{sound.name}}</td>
+            <td>{{sound.author}}</td>
+            <td>{{sound.sound}}</td>
+            <td>{{sound.soundpremium}}</td>
+            <td>{{sound.genre}}</td>
+            <td>
+                <img src="http://localhost:3001/src/{{sound.image}}"/>
+            </td>
+            <td>{{sound.premium}}</td>
+            <td>
+                <br/><button (click)="deleteSound(sound.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

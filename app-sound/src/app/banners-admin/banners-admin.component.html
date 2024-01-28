@@ -1,0 +1,29 @@
+{{errMessage}}
+<h2>Banner</h2>
+<button routerLink="/bannernew">Create new</button><router-outlet></router-outlet>
+<br/><br/>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Image</th>
+            <th>*on mouse hover show full size image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let b of banners">
+            <td>{{b.id}}</td>
+            <td>{{b.image}}</td>
+            <td>
+                <img src="http://localhost:3001/src/{{b.image}}"/>
+            </td>
+            <td>
+                <!-- <button routerLink="update">Update</button>
+                <a style="cursor:pointer;" (click)="viewDetail(book)" title="Click 
+            here to view detail">Details</a>
+                <br/><a href="http://localhost:3000/books/{{book.BookId}}">Detail</a> -->
+                <br/><button (click)="deleteBanner(b.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

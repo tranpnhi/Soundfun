@@ -1,0 +1,25 @@
+<p>{{errMessage}}</p>
+<table>
+<tr>
+<td>Id:</td>
+<td>
+<input type="text" class="form-control" #name="ngModel" name="id"
+id="id" placeholder="Enter Id"
+[(ngModel)]="banner.id"/>
+</td>
+</tr>
+
+<tr>
+    <td>Image:</td>
+    <td>
+    <input type="text" class="form-control" #name="ngModel"
+    name="image" id="image" placeholder="Enter Image"
+    [(ngModel)]="banner.image"/>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+    <button (click)="postBanner()" routerLink="/banneradmin">Save new</button>
+    </td>
+    </tr>
+</table> 

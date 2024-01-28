@@ -1,0 +1,32 @@
+<p>{{errMessage}}</p>
+<table>
+<tr>
+<td>Id:</td>
+<td>
+<input type="text" class="form-control" #name="ngModel" name="id"
+id="id"  placeholder="Enter Id" 
+[(ngModel)]="sound.id"/>
+</td>
+</tr>
+<tr>
+<td>Premium ('premium' or ''):</td>
+<td>
+<input type="text" class="form-control" #name="ngModel"
+name="premium" id="premium" placeholder="Enter Premium status"
+[(ngModel)]="sound.premium"/>
+</td>
+</tr>
+<tr>
+<td>Audio (watermark for premium):</td>
+<td>
+<input type="text" class="form-control" #name="ngModel"
+name="sound" id="sound" placeholder="Enter Audio"
+[(ngModel)]="sound.sound"/>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<button (click)="putSound()" routerLink="/soundadmin">Update</button>
+</td>
+</tr>
+</table>

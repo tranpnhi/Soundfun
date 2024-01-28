@@ -1,0 +1,37 @@
+<h2>Product</h2>
+Search: <input type="text" #genre> <button
+(click)="searchSound(genre.value)">Search</button>
+<div class="bg">
+  <input style="margin-left: 5%;" type="text" #id> <button (click)="searchSound(id.value)">Search Id</button>
+  <br/><br/>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card">
+              <div>
+                  <div >
+                      <div class="premium" style="float: right;">{{sound.premium}}</div>
+                      <img style="border-radius: 9999px; " class="avatar" src="http://localhost:3001/src/{{sound.image}}" />&nbsp;
+                      <div class="title">
+                      <div class="name">{{sound.name}}</div>
+                      <div class="author">{{sound.author}}</div>
+                      </div>
+                  </div>
+              </div>
+                  
+              <div>thanh nhac</div>
+  
+              <div class="product-detail-container">
+                  <div class="d-flex justify-content-between align-items-center">
+                  <audio class="au" src="./../../assets/sound/{{sound.sound}}" controls></audio>
+                  </div>
+  
+                  <!-- <div class="d-flex justify-content-between align-items-center mt-2">
+                  <div class="count"><button class="iconbutton"></button></div> 
+                  </div> -->
+              </div>
+              </div><br/>
+          </div>
+      </div>
+  </div>
+  </div>
